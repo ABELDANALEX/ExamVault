@@ -1,0 +1,50 @@
+{
+  "name": "examvault",
+  "version": "1.0.0",
+  "description": "Secure academic question paper generation with RBAC, Fisher-Yates randomness, and AES-256 vault encryption.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "build": "vite build",
+    "start": "npm run build && node server.js",
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "node --watch server.js",
+    "dev:client": "vite",
+    "decrypt:vault": "node tools/decrypt-vault.js",
+    "reset:data": "node tools/reset-data.js",
+    "sync:admin-password": "node tools/sync-admin-password.js"
+  },
+  "keywords": [
+    "exam",
+    "question-paper",
+    "aes-256",
+    "bloom-taxonomy",
+    "express",
+    "sqlite"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "csv-parse": "^5.5.6",
+    "dotenv": "^16.6.1",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0",
+    "multer": "^2.0.0",
+    "nodemailer": "^8.0.4",
+    "pdfkit": "^0.15.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.4",
+    "Twilio": "npm:twilio@^5.13.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "concurrently": "^9.2.1",
+    "vite": "^7.1.12"
+  },
+  "optionalDependencies": {
+    "twilio": "^5.0.0"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+data/*.db
+storage/papers/*
+sample-data/
+.env
+.env.*
+!.env.example
+logo.png
